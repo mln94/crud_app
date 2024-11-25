@@ -7,5 +7,32 @@
 </head>
 <body>
     <a href="./addcampaign">Add a campaign</a>
+    <table border="1" style="width: 100%; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Titre de la Campagne</th>
+                <th>Canal</th>
+                <th>Budget (€)</th>
+                <th>Date de Début</th>
+                <th>Date de Fin</th>
+                <th>Résultats Attendues</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Exemple de données statiques -->
+             <% for(let i = 0; i < campaign.length; i++) { %>
+            <tr>
+                <td>1</td>
+                <td><%= campaign[i].title %></td>
+                <td><%= campaign[i].channel %></td>
+                <td><%= campaign[i].budget %></td>
+                <td><%= campaign[i].startDate %></td>
+                <td><%= campaign[i].endDate %></td>
+                <td><%= campaign[i].results %></td>
+            </tr>
+             <% } %>
+        </tbody>
+    </table>
 </body>
 </html>

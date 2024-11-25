@@ -9,3 +9,13 @@ exports.create = async (req, res) => {
         res.status(400).json({error: error.message})
     }
 }
+
+exports.find = async(req, res) => {
+    try{
+        Campaign.find().then(campaign =>{
+            res.send(campaign)
+        })
+    }catch(error){
+        res.status(500).json({error: error.message})
+    }
+}

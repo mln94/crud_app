@@ -7,5 +7,6 @@ Router.get('/', services.home)
 Router.get('/addcampaign', services.addcampaign)
 
 Router.post('/addnewcampaign',controllers.create)
+Router.get('/getcampaign',controllers.find)
 
 module.exports = Router
