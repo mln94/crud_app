@@ -13,5 +13,5 @@ app.use(express.json())
 app.use(express.urlencoded())
 
 app.use("/", require("./server/routes/routes"))
-
+app.use(express.static("assets"))
 app.listen(process.env.PORT || port, console.log(`Connecter to the server on port ${port}`))

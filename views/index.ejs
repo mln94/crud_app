@@ -30,9 +30,13 @@
                 <td><%= campaign[i].startDate %></td>
                 <td><%= campaign[i].endDate %></td>
                 <td><%= campaign[i].results %></td>
+                <td>
+                    <a href="/updatecampaign?id=<%= campaign[i]._id%>">Update</a>
+                </td>
             </tr>
              <% } %>
         </tbody>
     </table>
+    <script type="text/javascript" src="/js/script.js"></script>
 </body>
 </html>
