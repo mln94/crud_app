@@ -37,26 +37,26 @@ exports.find = async(req, res) => {
 
 
 
-exports.find = (req, res) => {
-    if(req.query.id) {
-        console.log("id")
-        const id = req.query.id
-        Campaign.findById(id).then(data => {
-            if(!data){
-                res.status(404).send({ message : "Not found user with id "+ id})
-            }else{
-                res.send(data)
-            }
-        })
-    } else {
-        Campaign.find().then(campaign => {
-            res.send(campaign)
-        }).catch(err => {
-            res.status(500).send({message : err.message})
-        })
-    }
+// exports.find = (req, res) => {
+//     if(req.query.id) {
+//         console.log("id")
+//         const id = req.query.id
+//         Campaign.findById(id).then(data => {
+//             if(!data){
+//                 res.status(404).send({ message : "Not found user with id "+ id})
+//             }else{
+//                 res.send(data)
+//             }
+//         })
+//     } else {
+//         Campaign.find().then(campaign => {
+//             res.send(campaign)
+//         }).catch(err => {
+//             res.status(500).send({message : err.message})
+//         })
+//     }
 
-}
+// }
 
 exports.update = (req, res) => {
     const id = req.params.id

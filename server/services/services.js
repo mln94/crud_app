@@ -19,8 +19,8 @@ exports.updatecampaign = (req, res) => {
 
 exports.updatecampaign = (req, res) => {
     axios.get('http://localhost:3000/getcampaign', { params : { id : req.query.id }})
-    .then(function(campaign){
-        res.render("updatecampaign", { campaign: campaign.data})
+    .then(function(response){
+        res.render("updatecampaign", { campaign: response.data})
     })
     .catch(err =>{
         res.send(err);
